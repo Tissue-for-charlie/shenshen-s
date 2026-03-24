@@ -28,32 +28,43 @@ graph TD
 
 ## 2. 技术栈描述
 
-- **前端框架**: React@18 + TypeScript + Vite
-- **初始化工具**: vite-init
-- **样式方案**: TailwindCSS@3 + 自定义CSS变量
-- **状态管理**: Zustand
-- **路由管理**: React Router@6
-- **UI组件库**: HeadlessUI + RadixUI
-- **动画库**: Framer Motion
-- **数据可视化**: Chart.js + react-chartjs-2
-- **音频播放**: Howler.js
-- **图片处理**: react-lazyload + react-image-gallery
-- **后端服务**: Supabase
-- **部署平台**: Vercel/Netlify
+* **前端框架**: React\@18 + TypeScript + Vite
+
+* **初始化工具**: vite-init
+
+* **样式方案**: TailwindCSS\@3 + 自定义CSS变量
+
+* **状态管理**: Zustand
+
+* **路由管理**: React Router\@6
+
+* **UI组件库**: HeadlessUI + RadixUI
+
+* **动画库**: Framer Motion
+
+* **数据可视化**: Chart.js + react-chartjs-2
+
+* **音频播放**: Howler.js
+
+* **图片处理**: react-lazyload + react-image-gallery
+
+* **后端服务**: Supabase
+
+* **部署平台**: Vercel/Netlify
 
 ## 3. 路由定义
 
-| 路由路径 | 页面用途 |
-|----------|----------|
-| / | 首页，展示导航和英雄区域 |
-| /profile | 个人简介页，艺人信息和出道历程 |
-| /music | 音乐播放页，歌曲列表和播放器 |
-| /career | 演艺之路页，时间线展示 |
-| /awards | 获奖统计页，数据可视化 |
-| /videos | 视频展示页，近期视频内容 |
-| /gallery | 图片画廊页，瀑布流图片展示 |
-| /memes | 表情包页，搜索和下载功能 |
-| /fanworks | 粉丝混剪页，投稿和互动 |
+| 路由路径      | 页面用途            |
+| --------- | --------------- |
+| /         | 首页，展示导航和英雄区域    |
+| /profile  | 个人简介页，艺人信息和出道历程 |
+| /music    | 音乐播放页，歌曲列表和播放器  |
+| /career   | 演艺之路页，时间线展示     |
+| /awards   | 获奖统计页，数据可视化     |
+| /videos   | 视频展示页，近期视频内容    |
+| /gallery  | 图片画廊页，瀑布流图片展示   |
+| /memes    | 表情包页，搜索和下载功能    |
+| /fanworks | 粉丝混剪页，投稿和互动     |
 
 ## 4. 数据模型
 
@@ -139,6 +150,7 @@ erDiagram
 ### 4.2 数据定义语言
 
 用户表 (users)
+
 ```sql
 CREATE TABLE users (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -155,6 +167,7 @@ CREATE INDEX idx_users_username ON users(username);
 ```
 
 歌曲表 (songs)
+
 ```sql
 CREATE TABLE songs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -174,6 +187,7 @@ CREATE INDEX idx_songs_release_date ON songs(release_date DESC);
 ```
 
 视频表 (videos)
+
 ```sql
 CREATE TABLE videos (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -269,3 +283,4 @@ src/
 3. **结构化数据**: 添加JSON-LD结构化数据
 4. **Sitemap**: 自动生成网站地图
 5. **OpenGraph**: 支持社交媒体分享预览
+
